@@ -1,0 +1,68 @@
+
+
+<div class="form_style">
+<h2>Create a new card</h2>
+
+<%= form_with model: card do |form| %>
+<div class="form_first_rank">
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% card.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+    <div class="form_unit">
+    <%= form.label :road %><br>
+    <%= form.text_field :road %>
+    <% card.errors.full_messages_for(:road).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  
+    <div class="form_unit">
+    <%= form.label :number %><br>
+    <%= form.text_field :number %><br>
+    <% card.errors.full_messages_for(:number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    </div>
+
+    <div class="form_unit">
+    <%= form.label "Url of the picture" %><br>
+    <%= form.text_area :url, cols: "100", rows: "1", class: "form_url" %><br>
+    <% card.errors.full_messages_for(:url).each do |message| %>
+    <div><%= message %></div>
+    <% end %>
+    </div><br>
+
+</div><br>
+
+  <div>
+    <%= form.label :summary %><br>
+    <%= form.text_area :summary, rows: "5", cols: "183" %><br>
+    <% card.errors.full_messages_for(:summary).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div><br>
+
+  <div class="form_content">
+    <%= form.label :content %><br>
+    <%= form.text_area :content, rows: "15", cols: "183" %><br>
+    <% card.errors.full_messages_for(:content).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div><br>
+
+
+
+<div class="actions">
+    <%= form.submit "Create", class: "btn2" %>
+  <%= link_to 'Back', cards_path, class:"btn" %>
+</div>
+<br>
+<% end %>
+
+</div>

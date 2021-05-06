@@ -1,0 +1,102 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ html,body { height:100%; } 
+
+ /*TEXTES ------------------------------------*/
+
+ h1 {
+     font-family: Poppins;
+ }
+ p {
+     font-family: Poppins;
+ }
+
+ header {
+     position: fixed;
+     height: 70px;
+     width: 100%;
+     background-color: #1f1f1f;
+     top: 0;
+     left: 0;
+     display: flex;
+    justify-content: space-between;
+    z-index: 10;
+ }
+
+ footer {
+     width: 100%;
+     background-color: #1f1f1f;
+     height: 100px;
+     bottom: 0;
+ }
+
+ .user {
+     font-size: 15px;
+     background-color: white;
+     height: fit-content;
+     display: flex;
+     align-self: center;
+     margin-right: 10px;
+ }
+
+ .logo {
+     height: 70%;
+     padding: 10px;
+     z-index: 5;
+ }
+
+ .link_list {
+     display: flex;
+     flex-direction: row;
+     list-style: none;
+     align-self: center;
+ }
+
+ .link_list li {
+     margin: 0 10px;
+ }
+
+ .link_list a {
+    text-decoration: none;
+    font-family: Poppins;
+    color: #fff;
+    font-size: 18px;
+ }
+
+ .btn_header {
+     display: flex;
+     align-self: center;
+     margin-right: 20px;
+ }
+
+ .form_style {
+     padding-left: 20px;
+ }
+
+ .profile_container {
+     width: 90%;
+     margin: auto;
+     background-color: #77d7b9;
+     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+ }
+
+ .underline_admin {
+     background-color: red;
+ }
+
+ .hide {
+     opacity: 0;
+ }
