@@ -19,8 +19,8 @@
     </div>
     <br>
             <div class="form_style">
-                <%= link_to "Edit", edit_card_path(@card), class:'btn' %>
-                <%= link_to "Destroy", card_path(@card), class:'btn',
+                <%= link_to "Edit", edit_card_path(@card), class:'btn hide' %>
+                <%= link_to "Destroy", card_path(@card), class:'btn hide',
                         method: :delete,
                         data: { confirm: "Are you sure?" } %>
             </div>
