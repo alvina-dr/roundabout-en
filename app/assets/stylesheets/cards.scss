@@ -43,7 +43,6 @@
 .card_road {
     color: #fff;
     text-shadow: 2px 3px 4px grey;
-    background-color: #77d7b9;
     font-family: Poppins;
     font-size: 24px;
     width: fit-content;
@@ -91,7 +90,7 @@
     width: 100%;
     transform: translateY(calc(80px + 1em));
     transition: transform 0.3s;
-    background-color: #77d7b9;
+    background-color: #fff;
 }
 
 .card .wrapper:hover .data {
@@ -113,7 +112,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    color: #77d7b9;
+    color: #fff;
     padding: 10px;
     margin-top: 0;
 }
@@ -158,5 +157,3 @@
     padding: 10px;
     margin: 5px;
 }
-
-

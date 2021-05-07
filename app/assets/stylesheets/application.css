@@ -175,3 +175,25 @@
     width: 50px;
     height: 100%;
 }
+
+
+/* COULEUR DES ROUTES*/
+.Sleep {
+    background-color: #77d7b9;
+}
+
+.Cycling {
+    background-color: #d79a77;
+}
+
+.Universe {
+    background-color: #5781db;
+}
+
+.Feelings {
+    background-color: #dbd957;
+}
+
+.Building {
+    background-color: #92da76;
+}
