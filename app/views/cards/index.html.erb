@@ -7,26 +7,23 @@
 
 <div class="border">
     <div class="all">
-  <% @cards.each do |card| %>
-
-   <div class="card">
-        <a href="/cards/<%= card.id %>">
-            <div class="wrapper">
-                <img class="background_image" src="<%= card.url %>">
-                    <span><a href="/cards/<%= card.id %>" class="card_road"><%= card.road %></a></span>
-                <h3 class="halt_number">[ <%= card.number %> ]</h3>
-                <!--div class="card_summary"-->
-                    <div class="data">
-                        <h1 class="card_title"><%= card.title %></h1>
-                        <p class="card_content"><%=card.summary %></p>
+        <% @cards.each do |card| %>
+            <div class="card">
+                <a href="/cards/<%= card.id %>">
+                    <div class="wrapper">
+                        <img class="background_image" src="<%= card.url %>">
+                        <span><a href="/decks/<%= card.deck_id %>" class="card_road"><%= card.deck.title %></a></span>
+                        <h3 class="halt_number">[ <%= card.number %> ]</h3>
+                        <!--div class="card_summary"-->
+                        <div class="data">
+                            <h1 class="card_title"><%= card.title %></h1>
+                            <p class="card_content"><%=card.summary %></p>
+                        </div>
+                        <!--/div-->
                     </div>
-                <!--/div-->
+                </a>
             </div>
-        </a>
+        <% end %>
     </div>
-
-  <% end %>
-  
-      </div>
-    </div>
+</div>
 <br>

@@ -1,0 +1,24 @@
+<br><br><br>
+<div class="form_style">
+<h1>Decks</h1>
+<p>Here you can view all the decks :</p>
+</div>
+<br>
+
+<div class="border">
+    <div class="all">
+        <% @decks.each do |deck| %>
+        <div class="deck">
+            <a href="/decks/<%= deck.id %>">
+                <div class="wrapper">
+                    <img class="background_image" src="<%= deck.url %>">
+                    <div class="data">
+                        <h1 class="deck_title"><%= deck.title %></h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <% end %>
+    </div>
+</div>
+<br>

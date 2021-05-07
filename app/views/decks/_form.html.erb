@@ -1,0 +1,27 @@
+
+
+<div class="form_style">
+<h2>Create a new deck</h2>
+
+<%= form_with model: deck do |form| %>
+
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% deck.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %><br><br>
+
+    <%= form.label "Url of the picture" %><br>
+    <%= form.text_area :url, cols: "100", rows: "1", class: "form_url" %><br>
+    <% deck.errors.full_messages_for(:url).each do |message| %>
+    <div><%= message %></div>
+    <% end %><br>
+
+<div class="actions">
+    <%= form.submit "Create", class: "btn2" %>
+  <%= link_to 'Back', decks_path, class:"btn" %>
+</div>
+<br>
+<% end %>
+
+</div>

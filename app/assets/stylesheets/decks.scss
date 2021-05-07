@@ -1,0 +1,51 @@
+// Place all the styles related to the Decks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.deck {
+    min-width: 300px;
+    width: 20%;
+    max-width: 500px;
+    height: 400px;
+    background-color: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+    position: relative;
+}
+
+.deck .background_image {
+    width: 100%;
+    z-index: 0;
+}
+
+.deck .wrapper {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+.deck .wrapper:hover .data {
+    transform: translateY(0);
+}
+
+.deck .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc(-300px + 0em));
+    transition: transform 0.4s;
+    background-color: #77d7b9;
+}
+
+.deck_title {
+    color: #fff;
+    text-shadow: 2px 3px 4px grey;
+    font-family: Poppins;
+    font-size: 24px;
+    bottom: 0;
+    font-weight: 700;
+    text-align: center;
+}

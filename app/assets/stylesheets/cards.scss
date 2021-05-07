@@ -3,28 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body {
-    font-family: Poppins;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-}
 
-.border {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.all {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    justify-self: center;
-    align-self: center;
-    width:90%;
-    margin: 0;
-}
 
 .row {
     display: flex;
@@ -54,12 +33,11 @@ body {
     width: 20%;
     max-width: 500px;
     height: 450px;
-    background-color: white;
+    background-color: none;
     margin: 20px;
     padding: 0;
     display: flex;
     position: relative;
-
 }
 
 .card_road {
@@ -97,7 +75,7 @@ body {
     height: 80px;
 }
 
-.background_image {
+.card .background_image {
     width: 100%;
     z-index: 0;
     position: absolute;
@@ -182,29 +160,3 @@ body {
 }
 
 
-
-/*FORMULAIRE ---------------------------------------*/
-
-.form_first_rank {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-}
-
-.form_unit {
-    margin: 0 20px;
-}
-
-.form_url {
-    padding: 1.77px;
-    padding-top: 1.78px;
-    margin-bottom: 0;
-    margin-top: 3px;
-}
-
-.btns {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin: 20px;
-}

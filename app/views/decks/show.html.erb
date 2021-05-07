@@ -1,0 +1,35 @@
+<br><br><br>
+<div class="form_style">
+<h3>Here you can view all the cards from the deck : <%= @deck.title %></h3>
+</div>
+<br>
+
+<div class="border">
+    <div class="all">
+  <% @cards.each do |card| %>
+   <div class="card">
+        <a href="/cards/<%= card.id %>">
+            <div class="wrapper">
+                <img class="background_image" src="<%= card.url %>">
+                    <span><a class="card_road"><%= card.deck.title %></a></span>
+                <h3 class="halt_number">[ <%= card.number %> ]</h3>
+                <!--div class="card_summary"-->
+                    <div class="data">
+                        <h1 class="card_title"><%= card.title %></h1>
+                        <p class="card_content"><%=card.summary %></p>
+                    </div>
+                <!--/div-->
+            </div>
+        </a>
+    </div>
+
+  <% end %>
+              <div class="form_style">
+                <%= link_to "Edit", edit_deck_path(@deck), class:'btn ' %>
+                <%= link_to "Destroy", deck_path(@deck), class:'btn',
+                        method: :delete,
+                        data: { confirm: "Are you sure?" } %>
+            </div>
+      </div>
+    </div>
+<br>

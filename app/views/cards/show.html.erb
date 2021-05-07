@@ -6,7 +6,7 @@
         <a>
             <div class="wrapper">
                 <img class="background_image" src="<%= @card.url %>">
-                    <span><a href="/cards/<%= @card.id %>" class="card_road"><%= @card.road %></a></span>
+                    <span><a href="/decks/<%= @card.deck_id %>" class="card_road"><%= @card.deck.title %></a></span>
                 <h3 class="halt_number">[ <%= @card.number %> ]</h3>
                 <!--div class="card_summary"-->
                     <div class="data">

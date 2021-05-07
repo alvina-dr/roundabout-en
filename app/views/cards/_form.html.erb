@@ -1,7 +1,31 @@
+<%= simple_form_for@card do |f|%>
+<div class="form_style form_simple_form">
+  <h2>Create a new card</h2>
+  <div class="form_first_rank">
+    <%= f.input :title, input_html: { class: 'form_unit form_short' } %>
+    <div class="column_space"></div>
+    <%= f.association :deck, input_html: { class: 'form_unit form_short' } %>
+    <div class="column_space"></div>
+    <%= f.input :number, input_html: { class: 'form_unit form_short' }  %>
 
+  </div>
+  <br>
+  <%= f.input :url, input_html: { class: 'form_unit form_long' }  %>
+  <br>
+  <%= f.input :summary, input_html: { class: 'form_unit form_long' }  %>
+  <br>
+  <%= f.input :content, input_html: { class: 'form_unit form_long' }  %>
 
-<div class="form_style">
-<h2>Create a new card</h2>
+  <div class="actions">
+    <%= f.button :submit%>
+    <%= link_to 'Back', cards_path, class:"btn" %>
+  </div>
+ </div>
+<%end%>
+<br>
+
+<!--div class="form_style">
+
 
 <%= form_with model: card do |form| %>
 <div class="form_first_rank">
@@ -15,9 +39,9 @@
   </div>
 
     <div class="form_unit">
-    <%= form.label :road %><br>
-    <%= form.text_field :road %>
-    <% card.errors.full_messages_for(:road).each do |message| %>
+    <%= form.label :deck %><br>
+    <%= form.select :deck, options_for_select(Deck.pluck(:title, :id)) %>
+    <% card.errors.full_messages_for(:deck).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
@@ -58,11 +82,11 @@
 
 
 
-<div class="actions">
+
     <%= form.submit "Create", class: "btn2" %>
-  <%= link_to 'Back', cards_path, class:"btn" %>
+
 </div>
 <br>
 <% end %>
 
-</div>
+</div-->
