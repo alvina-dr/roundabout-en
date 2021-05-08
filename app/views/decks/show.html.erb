@@ -25,8 +25,8 @@
 
   <% end %>
               <div class="form_style">
-                <%= link_to "Edit", edit_deck_path(@deck), class:'btn ' %>
-                <%= link_to "Destroy", deck_path(@deck), class:'btn',
+                <%= link_to "Edit", edit_deck_path(@deck), class:'btn hide' %>
+                <%= link_to "Destroy", deck_path(@deck), class:'btn hide',
                         method: :delete,
                         data: { confirm: "Are you sure?" } %>
             </div>
